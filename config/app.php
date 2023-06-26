@@ -67,7 +67,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'Asia/Tashkent',
 
     /*
     |--------------------------------------------------------------------------
@@ -81,6 +81,7 @@ return [
     */
 
     'locale' => 'en',
+    'available_locales' => ['en','ru','uz'],
 
     /*
     |--------------------------------------------------------------------------
@@ -174,6 +175,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        Spatie\Permission\PermissionServiceProvider::class,
 
     ],
 
