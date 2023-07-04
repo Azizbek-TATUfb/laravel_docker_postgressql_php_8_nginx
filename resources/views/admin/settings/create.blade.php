@@ -60,7 +60,7 @@ use App\Helpers\StatusHelpers;
                         <div class="col-md-6 col-12">
                             <div class="form-group">
                                 <label for="key">Key</label>
-                                <input type="text" name="Key" id="key"
+                                <input type="text" name="key" id="key"
                                        class="form-control {{ empty($errors->first('key'))?:'is-invalid' }} "
                                        value="{{ old('key') }}">
                                 <div class="invalid-feedback">

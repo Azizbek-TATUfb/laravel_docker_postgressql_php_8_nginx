@@ -26,7 +26,9 @@ class SiteController extends Controller
         $partners = $this->partnersRepository->getAllSite();
         $services = $this->referenceRepository->getSiteList(ReferencesType::SERVICES_ID, ReferencesType::SERVICES_LIMIT);
         $products = $this->referenceRepository->getSiteList(ReferencesType::PRODUCTS_ID, ReferencesType::PRODUCTS_LIMIT);
+        $sliders = $this->referenceRepository->getSiteList(ReferencesType::SLIDER_ID, ReferencesType::SERVICES_LIMIT);
+        $about = $this->referenceRepository->getSiteList(ReferencesType::ABOUT_COMPANY_ID, ReferencesType::ABOUT_LIMIT);
 
-        return view('layouts.site',compact('news','partners','services','products'));
+        return view('layouts.site',compact('news','partners','services','products','sliders','about'));
     }
 }

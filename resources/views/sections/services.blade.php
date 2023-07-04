@@ -2,7 +2,7 @@
 ?>
 
 <section class="service" id="services">
-    <h1 class="title" data-aos-offset="200" data-aos="flip-up">УСЛУГИ</h1>
+    <h1 class="title" data-aos-offset="200" data-aos="flip-up">{{ __('app.services') }}</h1>
 
     <div class="service__inner">
         @if(!empty($services))

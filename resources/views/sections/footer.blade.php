@@ -5,70 +5,73 @@
         <div class="footer__top">
             <div class="footer__start">
                 <div class="footer-contact">
-                    <h3 class="footer__title">Контакты</h3>
+                    <h3 class="footer__title">{{ __('app.Contact') }}</h3>
                     <div class="footer-contact__box">
                         <div class="footer-contact__item">
-                            <img class="footer__icon" src="/app/images/location.svg" alt="footer icon">
-                            <div class="footer__infos">г.Ташкент, Чиланзар <br> 10 квартал, дом 3/1</div>
+                            <a href="{{ $settings['site_footer_location']['link']??"#" }}" class="header__item header__location">
+                                <img class="footer__icon" src="/app/images/location.svg" alt="footer icon">
+                                <div class="footer__infos">{!! ($settings['site_footer_location']['name']??"") !!}</div>
+                            </a>
                         </div>
                         <div class="footer-contact__item">
                             <img class="footer__icon" src="/app/images/message.svg" alt="footer icon">
-                            <a class="footer__infos" href="mailto:info@medol.uz">info@medol.uz</a>
+                            <a class="footer__infos" href="{{ $settings['site_email']['link']??"#" }}">{{ $settings['site_email']['link']??"#" }}</a>
                         </div>
                     </div>
                     <div class="footer-contact__box">
                         <div class="footer-contact__phone">
                             <img class="footer__icon" src="/app/images/phone.svg" alt="header icon">
                             <div class="footer__infos">
-                                <a class="footer__phone" href="tel:+998712766253">+998 71 276-62-53</a>
-                                <a class="footer__phone" href="tel:+998712766254">+998 71 276-62-54</a>
+                                <a class="footer__phone" href="{{ $settings['site_phone_one']['link']??"#" }}">{{ $settings['site_phone_one']['name']??"" }}</a>
+                                <a class="footer__phone" href="{{ $settings['site_phone_two']['link']??"#" }}">{{$settings['site_phone_two']['name']??""}}</a>
                             </div>
                         </div>
-                        <button class="btn">Оставить заявку</button>
+                        <button class="btn">@lang('app.submit-appeal')</button>
                     </div>
                 </div>
                 <div class="footer__info">
                     <img src="/app/images/logo.webp" alt="footer logo">
-                    <p class="text">Наша цель – построить прозрачный, долгосрочный бизнес, приносить огромную пользу населению, путем решения глобальных вопросов. Внедряя инновационные технологии на рынок Узбекистана.</p>
+                    <p class="text">{{ $settings['footer_text']['name']??"" }}</p>
                 </div>
             </div>
             <div class="footer__end">
-                <div class="footer__item">
-                    <h3 class="footer__title">О компании</h3>
-                    <ul class="footer__list">
-                        <li><a class="footer__link" href="#">История</a></li>
-                        <li><a class="footer__link" href="#">Партнеры</a></li>
-                        <li><a class="footer__link" href="#">Вакансии</a></li>
-                    </ul>
-                </div>
+                <div class="footer__end">
+                    <div class="footer__item">
+                        <h3 class="footer__title">@lang('app.about-company')</h3>
+                        <ul class="footer__list">
+                            <li><a class="footer__link" href="#">@lang('app.story')</a></li>
+                            <li><a class="footer__link" href="#">@lang('app.partners')</a></li>
+                            <li><a class="footer__link" href="#">@lang('app.vacancy')</a></li>
+                        </ul>
+                    </div>
 
-                <div class="footer__item">
-                    <h3 class="footer__title">Продукция</h3>
-                    <ul class="footer__list">
-                        <li><a class="footer__link" href="#">Эндоваскулярная хирургия</a></li>
-                        <li><a class="footer__link" href="#">Аритмология</a></li>
-                        <li><a class="footer__link" href="#">Кардиохирургия</a></li>
-                        <li><a class="footer__link" href="#">Лабораторная диагностика</a></li>
-                        <li><a class="footer__link" href="#">Хирургия</a></li>
-                        <li><a class="footer__link" href="#">Эндоурология</a></li>
-                        <li><a class="footer__link" href="#">Нейрохирургия</a></li>
-                        <li><a class="footer__link" href="#">Анестезиология и реанимация</a></li>
-                        <li><a class="footer__link" href="#">Диабет</a></li>
-                    </ul>
-                </div>
-                <div class="footer__item">
-                    <h3 class="footer__title">Услуги</h3>
-                    <ul class="footer__list">
-                        <li><a class="footer__link" href="#">Сервис</a></li>
-                        <li><a class="footer__link" href="#">Регистрации</a></li>
-                        <li><a class="footer__link" href="#">Услуги логистики</a></li>
-                    </ul>
+                    <div class="footer__item">
+                        <h3 class="footer__title">@lang('app.products')</h3>
+                        <ul class="footer__list">
+                            <li><a class="footer__link" href="#">@lang('app.endovascular-surgery')</a></li>
+                            <li><a class="footer__link" href="#">@lang('app.arrhythmology')</a></li>
+                            <li><a class="footer__link" href="#">@lang('app.cardiac-surgery')</a></li>
+                            <li><a class="footer__link" href="#">@lang('app.laboratory-diagnostics')</a></li>
+                            <li><a class="footer__link" href="#">@lang('app.surgery')</a></li>
+                            <li><a class="footer__link" href="#">@lang('app.endourology')</a></li>
+                            <li><a class="footer__link" href="#">@lang('app.anesthesiology-and-resuscitation')</a></li>
+                            <li><a class="footer__link" href="#">@lang('app.diabetes')</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__item">
+                        <h3 class="footer__title">@lang('app.services')</h3>
+                        <ul class="footer__list">
+                            <li><a class="footer__link" href="#">@lang('app.service')</a></li>
+                            <li><a class="footer__link" href="#">@lang('app.registrations')</a></li>
+                            <li><a class="footer__link" href="#">@lang('app.logistics-services')</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="footer__bottom">
             <span>© 2021 ООО «Medical Online Services»</span>
-            <span>Дизайн сделан: <a href="mailto:damingues92@gmail.com">damingues92@gmail.com</a></span>
+            <span>@lang('app.design-done') <a href="mailto:damingues92@gmail.com">damingues92@gmail.com</a></span>
         </div>
     </div>
 </footer>

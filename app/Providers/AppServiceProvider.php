@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use App\Repositories\SettingsRepository;
 use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 use League\Flysystem\Config;
@@ -27,6 +29,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Paginator::useBootstrap();
-        View::share('settings', [1,2,3,4,5,6,7]);
+        $settings = App::make(\App\Repositories\SettingsRepository::class)->getAll();
+        View::share('settings',$settings );
     }
 }

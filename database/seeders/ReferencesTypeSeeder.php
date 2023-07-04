@@ -27,6 +27,18 @@ class ReferencesTypeSeeder extends Seeder
                 "name_ru" => "УСЛУГИ",
                 "name_en" => "SERVICES",
             ],
+            [
+                "id" => ReferencesType::SLIDER_ID,
+                "name_uz" => "SLIDER",
+                "name_ru" => "SLIDER",
+                "name_en" => "SLIDER",
+            ],
+            [
+                "id" => ReferencesType::ABOUT_COMPANY_ID,
+                "name_uz" => "KOMPANYA HAQIDA",
+                "name_ru" => "О КОМПАНИИ",
+                "name_en" => "ABOUT COMPANY",
+            ],
         ],['id']);
     }
 }

@@ -18,7 +18,9 @@ class DatabaseSeeder extends Seeder
             ReferencesTypeSeeder::class,
             AttachmentsSeeder::class,
             NewsSeeder::class,
-            PartnerSeeder::class
+            PartnerSeeder::class,
+            ReferencesSeeder::class,
+            SettingsSeeder::class
         ]);
     }
 }

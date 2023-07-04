@@ -6,7 +6,7 @@
     <link rel="shortcut icon" href="{{ asset('app/images/logo.webp') }}" type="image/x-icon">
     <link rel="stylesheet" href="{{ asset('app/css/style.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('app/css/main.min.css') }}" />
-    <title>MEDOL - Medical Online Services</title>
+    <title>{{ strip_tags($settings['site_title']['name']??"MEDOL") }}</title>
 </head>
 <body>
 
@@ -15,25 +15,29 @@
         <img class="sidebar__close" src="/app/images/x-btn.webp" alt="x btn">
 
         <div class="header__item">
-            <img class="header__icon" src="/app/images/location.svg" alt="header icon">
-            <div class="header__info">г.Ташкент, Чиланзар <br> 10 квартал, дом 3/1</div>
+            <a href="{{ $settings['site_location']['link']??"" }}">
+                <img class="header__icon" src="/app/images/location.svg" alt="header icon">
+                <div class="header__info">{!! strip_tags(($settings['site_location']['name']??"")) !!}</div>
+            </a>
         </div>
 
         <div class="header__item">
             <img class="header__icon" src="/app/images/phone.svg" alt="header icon">
             <div class="header__info">
-                <a class="header__phone" href="tel:+998712766253">+998 71 276-62-53</a>
-                <a class="header__phone" href="tel:+998712766254">+998 71 276-62-54</a>
+                <a class="header__phone" href="{{ $settings['site_phone_one']['link']??"#" }}">{{ $settings['site_phone_one']['name']??"" }}</a>
+                <a class="header__phone" href="{{ $settings['site_phone_two']['link']??"#" }}">{{$settings['site_phone_two']['name']??""}}</a>
             </div>
         </div>
 
         <a class="header__item" href="#">
             <img class="header__icon" src="/app/images/search.svg" alt="header icon">
-            Search
+            {{ __('app.Search') }}
         </a>
         <div class="header__icon header__icon_block">
-            <img src="/app/images/facebook.svg" alt="header icon">
-            <span>Мы на Facebook</span>
+            <a href="{{ $settings['facebook_text']['link']??"" }}">
+                <img src="/app/images/facebook.svg" alt="header icon">
+                <span>{{ $settings['facebook_text']['name']??"" }}</span>
+            </a>
         </div>
     </div>
 </aside>

@@ -5,6 +5,7 @@ namespace App\Repositories;
 use App\Helpers\TelegramHelpers;
 use App\Models\Admin\Settings;
 use App\Repositories\Interfaces\BaseInterface;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 
@@ -18,7 +19,15 @@ class SettingsRepository implements BaseInterface
     }
     public function getAll()
     {
-        // TODO: Implement getAll() method.
+        return Settings::select([
+            "name_".App::getLocale()." as name",
+            "link",
+            "type",
+            "key",
+            "path",
+        ]) ->leftJoin('attachments', 'settings.attachment_id', '=', 'attachments.id')
+            ->where('settings.status', Settings::STATUS_ACTIVE)
+            ->get()->keyBy('key')->toArray();
     }
 
 

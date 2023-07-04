@@ -92,9 +92,10 @@ class SettingsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Settings $settings)
     {
-        $this->service->delete($id);
+//        $this->service->delete($id);
+        $settings->delete();
         return redirect()->route('admin.settings.index');
     }
 }
