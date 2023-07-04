@@ -40,7 +40,7 @@
                                     <td>
                                         <div class="d-flex">
                                             <a href="{{ route('admin.partners.edit',$partner->id) }}" class="btn btn-sm btn-primary mx-2"><i class="fa fa-pen"></i></a>
-                                            <a href="{{ route('admin.partners.show',$partner->id) }}" class="btn btn-sm btn-info mx-2"><i class="fa fa-eye"></i></a>
+{{--                                            <a href="{{ route('admin.partners.show',$partner->id) }}" class="btn btn-sm btn-info mx-2"><i class="fa fa-eye"></i></a>--}}
                                             <form action="{{route('admin.partners.destroy', $partner->id)}}" method="POST">
                                                 @csrf
                                                 @method('DELETE')

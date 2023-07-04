@@ -94,7 +94,8 @@ class PartnerController extends Controller
      */
     public function destroy($id)
     {
-        $this->service->delete($id);
+//        $this->service->delete($id);
+        Partner::destroy($id);
         return redirect()->route('admin.partners.index');
     }
 }
