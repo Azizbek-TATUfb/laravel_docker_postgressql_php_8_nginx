@@ -15,7 +15,7 @@
         <img class="sidebar__close" src="/app/images/x-btn.webp" alt="x btn">
 
         <div class="header__item">
-            <a href="{{ $settings['site_location']['link']??"" }}">
+            <a href="{{ $settings['site_location']['link']??"" }}" class="header__item">
                 <img class="header__icon" src="/app/images/location.svg" alt="header icon">
                 <div class="header__info">{!! strip_tags(($settings['site_location']['name']??"")) !!}</div>
             </a>
@@ -31,10 +31,10 @@
 
         <a class="header__item" href="#">
             <img class="header__icon" src="/app/images/search.svg" alt="header icon">
-            {{ __('app.Search') }}
+            {{ __('app.search') }}
         </a>
         <div class="header__icon header__icon_block">
-            <a href="{{ $settings['facebook_text']['link']??"" }}">
+            <a href="{{ $settings['facebook_text']['link']??"" }}" class="header__icon header__icon_block">
                 <img src="/app/images/facebook.svg" alt="header icon">
                 <span>{{ $settings['facebook_text']['name']??"" }}</span>
             </a>
