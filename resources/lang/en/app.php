@@ -34,4 +34,5 @@ return [
     'registrations' => 'Registrations',
     'logistics-services' => 'Logistics services',
     'submit-appeal' => 'Submit your application',
+    'search' => 'Search',
 ];

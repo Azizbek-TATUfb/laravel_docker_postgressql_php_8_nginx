@@ -33,4 +33,5 @@ return [
     'registrations' => 'Ro\'yxatga olish',
     'logistics-services' => 'Logistika xizmatlari',
     'submit-appeal' => 'Arizangizni yuboring',
+    'search' => 'Qidirish',
 ];

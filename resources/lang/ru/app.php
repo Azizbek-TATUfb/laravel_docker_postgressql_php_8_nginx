@@ -33,4 +33,5 @@ return [
     'registrations' => 'Регистрации',
     'logistics-services' => 'Услуги логистики',
     'submit-appeal' => 'Оставить заявку',
+    'search' => 'Поиск',
 ];
